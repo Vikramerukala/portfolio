@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <h1>Image Gallery</h1>
+
+    <div class="gallery">
+        <img src="./images/vikram.png" alt="Image 1" onclick="openLightbox(0)">
+        <img src="./images/2 (2).jpg" alt="Image 2" onclick="openLightbox(1)">
+        <img src="./images/IMG-20251130-WA0016.jpg" alt="Image 3" onclick="openLightbox(2)">
+        <img src="./images/IMG-20251129-WA0154.jpg" alt="Image 4" onclick="openLightbox(3)">
+        <img src="./images/IMG-20251129-WA0147.jpg" alt="Image 5" onclick="openLightbox(4)">
+        <img src="./images/IMG-20251129-WA0141.jpg" alt="Image 6" onclick="openLightbox(5)">
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+
+        <button class="prev" onclick="changeImage(-1)">❮</button>
+
+        <img id="lightbox-img">
+
+        <button class="next" onclick="changeImage(1)">❯</button>
+    </div><div class="filters">
+    <button class="filter-btn" onclick="filterSelection('all')">All</button>
+    <button class="filter-btn" onclick="filterSelection('friends')">Friends</button>
+    <button class="filter-btn" onclick="filterSelection('Group Pic ')">Group pic</button>
+    <button class="filter-btn" onclick="filterSelection('Trips')">Trips</button>
+</div>
+
+<div class="gallery">
+    <img src="./images/IMG-20251130-WA0016.jpg" class="gallery-item friends">
+    <img src="./images/IMG-20251129-WA0177.jpg" class="gallery-item Grouppic">
+    <img src="./images/IMG-20250101-WA0114.jpg" class="gallery-item Trips">
+    <img src="./images/IMG-20250623-WA0062.jpg" class="gallery-item friends">
+    <img src="./images/IMG-20260502-WA0029.jpg" class="gallery-item Group">
+    <img src="./images/IMG-20260119-WA0029.jpg" class="gallery-item city">
+</div>
+
+
+    <script src="./javascript1.js"></script>
+</body>
+</html>
